@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--Meta Tags-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-----Icon----->
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+
+  <!-----Title----->
+  <title>Licence Request</title>
+
+  <!-----Font Poppins----->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-----Font Icons----->
+  <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
+
+
+  <!-----Custom CSS----->
+  <link rel="stylesheet" href="asset/form.css" />
+
+  <!-- Jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script>
+    $(function () {
+      $("#nav-placeholder").load("nav.html");
+      $("#footer-placeholder").load("footer.html");
+    });
+  </script>
+</head>
+
+<body>
+  <!--------------------------------------- Nav Bar and Side Menu -------------------------------------->
+  <div id="nav-placeholder"></div>
+  <!--NAV and Sidebar End-->
+
+  <div class="wrapper">
+    <div class="title">Request <br />Copyright Licence</div>
+
+    <div class="licence-request-form">
+      <div class="form">
+        <div class="inputfield">
+          <label>Full Name</label>
+          <input type="text" class="input licence-form-Name" id="inputfield-fullName" />
+        </div>
+        <div class="inputfield">
+          <label>Company</label>
+          <input type="text" class="input licence-form-Company" id="inputfield-company" />
+        </div>
+        <div class="inputfield">
+          <label>Contact Number </label>
+          <input type="text" class="input licence-form-Contact" id="inputfield-contactNumber" />
+        </div>
+
+        <div class="inputfield">
+          <label>Email Address</label>
+          <input type="email" class="input licence-form-Email" id="inputfield-email" />
+        </div>
+
+        <div class="inputfield">
+          <label>Media Type</label>
+          <div class="custom_select">
+            <select class="" id="inputfield-mediaType">
+              <option value="Advertisement">Advertisement</option>
+              <option value="Corporate">Corporate</option>
+              <option value="Flim">Flim</option>
+              <option value="Game">Game</option>
+              <option value="Merchandise">Merchandise</option>
+              <option value="Online">Online</option>
+              <option value="Print">Print</option>
+              <option value="Radio">Radio</option>
+              <option value="Trailers">Trailers</option>
+              <option value="TV">TV</option>
+              <option value="TV Promo">TV Promo</option>
+            </select>
+          </div>
+        </div>
+        <div class="inputfield">
+          <label>Song Title</label>
+          <input type="text" class="input licence-form-SongTitle" id="inputfield-songTitle" />
+        </div>
+        <div class="inputfield">
+          <label>Song Writer/Artist</label>
+          <input type="text" class="input licence-form-SongWriter" id="inputfield-artist" />
+        </div>
+        <div class="inputfield">
+          <label>Production Name</label>
+          <input type="text" class="input licence-form-Production" id="inputfield-productionName" />
+        </div>
+
+        <div class="inputfield">
+          <label>Licence Duration</label>
+          <select class="inputfield-licenceDuration custom_select" id="inputfield-licenceDuration">
+            <option value="3 Months">3 Months</option>
+            <option value="1 Year">1 Year</option>
+            <option value="2 Years">2 Years</option>
+            <option value="5 Years">5 Years</option>
+          </select>
+        </div>
+
+        <div class="inputfield">
+          <label>Territory</label>
+          <label><input type="radio" name="inputfield-territory" value="Sri Lanka">Sri Lanka</label>
+          <label><input type="radio" name="inputfield-territory" value="Worldwide">Worldwide</label>
+        </div>
+
+        <div class="inputfield">
+          <label>Additional Details</label>
+          <textarea type="text" class="input licence-form-Additional" id="inputfield-details">
+            </textarea>
+        </div>
+
+        <br /><br />
+        <div class="inputfield">
+          <input type="submit" value="submit" class="btn" id="copyrightLicenceRequest-submit-button" />
+        </div>
+      </div>
+      </form>
+      </div>
+    </div>
+
+    <!--------------------------------------- Footer -------------------------------------->
+
+    <div id="footer-placeholder"></div>
+    <!--Footer End-->
+</body>
+<script type="text/javascript" src="./javascript/copyrightLicenceRequest.js" defer></script>
+
+</html>

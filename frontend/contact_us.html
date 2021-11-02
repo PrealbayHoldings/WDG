@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--Meta Tags-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-----Icon----->
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+
+  <!-----Title----->
+  <title>Contact Form</title>
+
+  <!-----Font Poppins----->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-----CSS----->
+  <link rel="stylesheet" href="asset/contact_us.css" />
+
+  <!-----Font Icons----->
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+
+  <!-- Jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script>
+    $(function () {
+      $("#nav-placeholder").load("nav.html");
+      $("#footer-placeholder").load("footer.html");
+    });
+  </script>
+</head>
+
+<body>
+  <!--------------------------------------- Nav Bar and Side Menu -------------------------------------->
+  <div id="nav-placeholder"></div>
+  <!--NAV and Sidebar End-->
+
+  <div class="bigcontainer">
+    <div class="container-switcher">
+      <div class="Country-Switcher">
+        <div class="animated_button">
+          <a href="contact_us.html">
+            <p style="background: #f2192a">
+              <span class="bg"></span><span class="base"></span><span class="switcher-text">Sri Lanka</span>
+            </p>
+          </a>
+          <a href="contact_us_australia.html">
+            <p>
+              <span class="bg"></span><span class="base"></span><span class="switcher-text">Australia</span>
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <span class="big-circle"></span>
+      <img src="Images/shape.png" class="square" alt="" />
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Contact Our Team in <br />Sri Lanka</h3>
+          <p class="text">Hello, there! We’ll be glad to hear from you.</p>
+
+          <div class="info">
+            <div class="information">
+              <img src="Images/location.png" class="icon" alt="" />
+              <p>
+                4th Floor, 181, High Level Rd, Maharagama 10280, Sri Lanka
+              </p>
+            </div>
+            <div class="information">
+              <img src="Images/email.png" class="icon" alt="" />
+              <p>info@wediditglobal.com</p>
+            </div>
+            <div class="information">
+              <img src="Images/phone.png" class="icon" alt="" />
+              <p>(+94) 76 538 7535</p>
+            </div>
+          </div>
+
+          <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/wediditglobal">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://twitter.com/wediditglobal">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.instagram.com/wediditglobal.music">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <div class="contactForm">
+            <h3 class="title">Contact us</h3>
+
+            <div class="input-container">
+              <input type="text" name="name" class="lk-con-name" id="input-field-name" />
+              <label for="">Name</label>
+
+            </div>
+
+            <div class="input-container">
+              <input type="email" name="email" class="lk-con-email" id="input-field-email" />
+              <label for="">Email</label>
+
+            </div>
+
+            <div class="input-container">
+              <input type="tel" name="phone" class="lk-con-phone" id="input-field-phone" />
+              <label for="">Phone</label>
+
+            </div>
+
+            <div class="input-container textarea">
+              <textarea name="message" class="lk-con-Message" id="input-field-message"></textarea>
+              <label for="">Message</label>
+
+            </div>
+
+            <input type="submit" value="submit" class="btn" id="contactUs-submit-button" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+</body>
+<script type="text/javascript" src="./javascript/contactUs.js" defer></script>
+
+</html>

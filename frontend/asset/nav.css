@@ -1,0 +1,350 @@
+* {
+  box-sizing: border-box;
+}
+
+main {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+main h1 {
+  font-size: 40px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+}
+
+nav.stroke ul li a {
+  position: relative;
+}
+
+nav.stroke ul li a:after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: rgba(237, 41, 57, 1);
+  height: 3px;
+}
+
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+.header {
+  position: relative;
+  transition: all 0.7s;
+  z-index: 1000;
+  width: 100%;
+  background: #19232d49;
+  height: 65px;
+}
+
+.header.sticky {
+  top: 0;
+  transition: 0.5s;
+  width: 100%;
+  position: fixed;
+  background-color: #19232d;
+  box-shadow: 0 8px 10px -10px rgba(0, 0, 0, 0.25);
+}
+
+.header .sidemenu-toggler {
+  position: absolute;
+  width: 40px;
+  padding: 6px;
+  top: 26%;
+  right: 40px;
+}
+
+.header .sidemenu-toggler > span {
+  display: block;
+  background-color: white;
+  height: 3px;
+}
+
+.header .sidemenu-toggler > span:nth-child(2) {
+  margin: 4px 0 4px auto;
+}
+
+.header .sidemenu-toggler:hover > span:nth-child(2),
+.header .sidemenu-toggler:hover > span:nth-child(3) {
+  width: 100%;
+}
+
+.header .sidemenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #2d0b00;
+  background-image: linear-gradient(315deg, #2d0b00 0%, #731010 50%);
+  width: 40%;
+  height: 100vh;
+  z-index: 999;
+  padding: 4rem;
+  color: white;
+  transform: translate3d(100%, 0, 0);
+  transition: transform 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.header .sidemenu.active {
+  transform: translate3d(0, 0, 0);
+}
+
+.header .sidemenu .close {
+  height: 30px;
+  width: 30px;
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 24px;
+}
+
+.header .sidemenu .close::before,
+.header .sidemenu .close::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 13px;
+  height: 28px;
+  width: 2px;
+  background: white;
+}
+
+.header .sidemenu .close::before {
+  transform: rotate(45deg);
+}
+
+.header .sidemenu .close::after {
+  transform: rotate(-45deg);
+}
+
+.header .sidemenu nav ul {
+  padding-top: 30px;
+}
+
+.header .sidemenu nav li {
+  padding: 15px 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all 0.5s;
+}
+nav ul li a:hover {
+  color: #555;
+}
+
+.header .sidemenu nav a {
+  font-size: 1.3rem;
+  color: white;
+  text-transform: uppercase;
+}
+
+.header .sidemenu {
+  padding-top: 100px;
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+
+.header .wrap {
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  padding: 0 120px 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  margin: 0;
+  padding: 12px 0;
+  width: 90px;
+}
+
+.header .logo a,
+.header .logo a img {
+  display: block;
+}
+
+.header .logo img {
+  width: 200px;
+}
+
+.header .menu ul {
+  display: flex;
+  font-size: 12px;
+}
+
+.header .menu li {
+  padding: 6px;
+}
+
+.header .menu a {
+  font-size: 1rem;
+  color: white;
+  padding: 8px;
+  display: block;
+  text-transform: uppercase;
+}
+
+.header .sidemenu .social {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.header .sidemenu .social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: all 0.3s linear;
+  margin-right: 5px;
+  text-transform: uppercase;
+}
+
+/*-------------------------------------Nav Dropdown-------------------------------*/
+
+/* Dropdown Button */
+.dropbtn {
+
+  padding: 16px;
+  border: none;
+}
+
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #121c26;
+  padding-top: 7px;
+  min-width: 220px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  margin-top: 5px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: rgba(237, 41, 57, 1);
+  letter-spacing: 0.5px;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*--------------------------------- Nav Dropdown End -----------------------------*/
+
+/*-------------------------------------Nav Dropdown-------------------------------*/
+
+/* Dropdown Button */
+.dropbtn-side {
+  color: #ffffff;
+  font-size: 1.3rem;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown-side {
+  width: 100%;
+  padding: 8px 0 8px 0;
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content-side {
+  width: 100%;
+  display: none;
+  position: absolute;
+  background-color: #2A0000;
+  min-width: 300px;
+  box-shadow: 0 8px 10px 10px rgb(0 0 0 / 25%);
+
+}
+
+/* Links inside the dropdown */
+.dropdown-content-side a {
+padding: 15px;
+color: #ffffff;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content-side a:hover {
+
+  background-color: rgba(237, 41, 57, 1);
+  letter-spacing: 0.5px;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown-side:hover .dropdown-content-side {
+  display: block;
+}
+
+/*--------------------------------- Nav Dropdown End -----------------------------*/
+
+@media (max-width: 767px) {
+  .header .sidemenu {
+    width: 100%;
+  }
+  .header .sidemenu nav a, .dropbtn-side {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 991px) {
+    .header .sidemenu {
+      width: 70%;
+    }
+    .header .sidemenu nav a {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .header .menu {
+    display: none;
+  }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Meta Tags-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-----Icon----->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+
+    <!-----Title----->
+    <title>Artist & Repertoire</title>
+
+    <!-----Font Poppins----->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+
+    <!-----Font Icons----->
+    <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
+
+    <!-----CSS----->
+    <link rel="stylesheet" href="/asset/bootstrap.min.css" />
+
+    <!-----Custom CSS----->
+    <link rel="stylesheet" href="Asset/members.css" />
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("nav.html");
+            $("#footer-placeholder").load("footer.html");
+        });
+    </script>
+</head>
+
+<body>
+    <!--------------------------------------- Nav Bar and Side Menu -------------------------------------->
+    <div id="nav-placeholder"></div>
+    <!--NAV and Sidebar End-->
+
+    <section class="team-section">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h1>All Members</h1>
+                    <p>
+                        Why you need "We Did It Global"? Because We are here to take
+                        responsibility for the rights, pay, and security of your music.
+                    </p>
+                </div>
+            </div>
+
+            <div id="memberCatalogueReactContainer">
+            </div>
+        </div>
+    </section>
+
+    <!--------------------------------------- Footer -------------------------------------->
+    <div id="footer-placeholder"></div>
+    <!--Footer End-->
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" src="./javascript/ReactComponents/MemberCataloguePage.js"></script>
+    <script type="text/babel">
+        ReactDOM.render(<MemberCataloguePage />, document.querySelector("#memberCatalogueReactContainer"));
+    </script>
+</body>
+
+</html>

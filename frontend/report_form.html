@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Meta Tags-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-----Icon----->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+
+    <!-----Title----->
+    <title>Report</title>
+
+    <!-----Font Poppins----->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+
+    <!-----Font Icons----->
+    <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
+
+    <!-----Custom CSS----->
+    <link rel="stylesheet" href="asset/form.css" />
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("nav.html");
+            $("#footer-placeholder").load("footer.html");
+        });
+    </script>
+</head>
+
+<body>
+
+    <!--------------------------------------- Nav Bar and Side Menu -------------------------------------->
+    <div id="nav-placeholder"></div>
+    <!--NAV and Sidebar End-->
+
+    <div class="wrapper">
+        <div class="title">Report <br />copyright infringement</div>
+
+        <div class="form email-report-form">
+            <div class="form">
+                <div class="inputfield">
+                    <label>Email Address</label>
+                    <input type="text" class="input report-email" id="inputfield-email" />
+                </div>
+
+                <div class="inputfield">
+                    <label>Content Name</label>
+                    <input type="text" class="input report-Content-Name" id="inputfield-contentName" />
+                </div>
+
+                <div class="inputfield">
+                    <label>Media Type</label>
+                    <div class="custom_select">
+                        <select class="report-Media-type" id="inputfield-mediaType">
+                            <option value="Media">Media</option>
+                            <option value="Corporate">Corporate</option>
+                            <option value="Online">Online</option>
+                            <option value="Radio">Radio</option>
+                            <option value="TV">TV</option>
+                            <option value="Live Outdoor">Live Outdoor</option>
+                            <option value="Live Indoor">Live Indoor</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="inputfield">
+                    <label>Additional Details</label>
+                    <textarea type="text" class="input report-AddDetails" id="inputfield-details"> </textarea>
+                </div>
+
+                <div class="inputfield">
+                    <label>URL (if applicable)</label>
+                    <input type="text" class="input report-URL" id="inputfield-url" />
+                </div>
+
+                <br /><br />
+
+                <div class="inputfield">
+                    <input type="submit" value="submit" class="btn" id="reportForm-submit-button" />
+                </div>
+
+            </div>
+            </form>
+
+        </div>
+
+    </div>
+    <!--------------------------------------- Footer -------------------------------------->
+
+    <div id="footer-placeholder"></div>
+    <!--Footer End-->
+    <script type="text/javascript" src="./javascript/report_form.js" defer></script>
+</body>
+
+</html>

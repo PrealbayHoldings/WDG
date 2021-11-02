@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Meta Tags-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-----Icon----->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+
+    <!-----Title----->
+    <title>Sign Up Request</title>
+
+    <!-----Font Poppins----->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+
+    <!-----Font Icons----->
+    <!-- <script src="https://kit.fontawesome.com/c4254e24a8.js"></script> -->
+
+
+    <!-----Custom CSS----->
+    <link rel="stylesheet" href="asset/form.css" />
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("nav.html");
+            $("#footer-placeholder").load("footer.html");
+        });
+    </script>
+</head>
+
+<body>
+    <!--------------------------------------- Nav Bar and Side Menu -------------------------------------->
+    <div id="nav-placeholder"></div>
+    <!--NAV and Sidebar End-->
+
+
+    <div class="wrapper">
+        <div class="title"> Sign Up </div>
+
+        <div class="form email-report-form">
+
+            <div class="form">
+
+                <br />
+
+                <div class="inputfield">
+                    <label>Your Full Name</label>
+                    <input type="text" class="input report-Content-Name" maxlength="100"
+                        id="signUpForm-inputField-fullName" required>
+                </div>
+
+                <div class="inputfield">
+                    <label>I am a</label>
+                    <div class="custom_select artistSelectContainer">
+                        <label for="author">
+                            <input type="checkbox" id="signUpForm-inputField-artistType-author" name="artistType"
+                                value="Author" />
+                            Author
+                        </label>
+                        <label for="composer">
+                            <input type="checkbox" name="artistType" value="Composer"
+                                id="signUpForm-inputField-artistType-composer" />
+                            Composer
+                        </label>
+                        <label for="melody-writer">
+                            <input type="checkbox" name="artistType" value="melody-writer"
+                                id="signUpForm-inputField-artistType-melodyWriter" />
+                            Melody Writer
+                        </label>
+
+                    </div>
+                </div>
+
+                <div class="inputfield">
+                    <label>Contact Number</label>
+                    <input type="number" class="input report-AddDetails" id="signUpForm-inputField-contactNumber"
+                        required maxlength="10">
+                    </textarea>
+                </div>
+
+                <div class="inputfield">
+                    <label>Email</label>
+                    <input type="email" class="input report-AddDetails" id="signUpForm-inputField-email" maxlength="75">
+                    </textarea>
+                </div>
+
+                <div class="inputfield">
+                    <label>Please send us a brief Description about your self</label>
+                    <textarea type="text" class="input report-AddDetails" id="signUpForm-inputField-description"
+                        maxlength="500"> </textarea>
+                </div>
+                <br><br>
+
+                <div class="inputfield">
+                    <input type="submit" value="Send Now !" class="btn" id="signupform-submit-button">
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+    <!--------------------------------------- Footer -------------------------------------->
+
+    <div id="footer-placeholder"></div>
+    <!--Footer End-->
+    <script type="text/javascript" src="./javascript/signUpForm.js" defer></script>
+</body>
+
+</html>

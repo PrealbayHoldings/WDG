@@ -1,0 +1,148 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="asset/nav.css" />
+</head>
+
+<body>
+    <main class="main">
+        <header class="header">
+            <div class="wrap d-flex">
+                <h1 class="logo">
+                    <a href="index.html"><img src="images/Asset 21.png" alt="" /></a>
+                </h1>
+
+                <nav class="menu stroke">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tracks.html">Music Catalogue</a></li>
+                        <li><a href="members.html">Artist & Repertoire</a></li>
+                        <li><a href="new_gallery.html"> Gallery</a></li>
+                        <div class="dropdown">
+                            <li><a class="dropbtn"> Forms    <i class="fa fa-angle-down" aria-hidden="true"></i> </a></li>
+
+                            <div class="dropdown-content">
+                                <a href="signupfoam.html">Membership Request</a>
+                                <a href="licence_request_form.html">Licence Request</a>
+                                <a href="report_form.html">Report Infringement</a>
+                            </div>
+                        </div>
+                        <li><a href="about_us.html">About Us</a></li>
+                        <li><a href="our_team_sri_lanka.html">Our Team</a></li>
+                        <li><a href="contact_us.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+
+                <a href="javascript:void(0);" class="sidemenu-toggler">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+
+            <div class="sidemenu">
+                <a href="javascript:void(0);" class="close"></a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tracks.html">Music Catalog</a></li>
+                        <li><a href="members.html">Artist & Repertoire</a></li>
+                        <li><a href="new_gallery.html"> Gallery</a></li>
+
+
+
+
+                </nav>
+
+                <div class="dropdown-side">
+                    <li><a class="dropbtn-side"> Forms </a></li>
+                        <div class="dropdown-content-side">
+                            <a href="signupfoam.html">Membership Request</a>
+                            <a href="licence_request_form.html">Licence Request</a>
+                            <a href="report_form.html">Report Infringement</a>
+                        </div>
+                </div>
+
+                <nav>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="our_team_sri_lanka.html">Our Team</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+
+                <div class="social">
+                    <a href="https://www.youtube.com/c/WeDidItMusic"><img src="images/facebook.png" alt="" /></a>
+                    <a href="https://twitter.com/wediditglobal"><img src="images/twitter.png" alt="" /></a>
+                    <a href="https://www.instagram.com/wediditglobal.music"><img src="images/instagram.png"
+                            alt="" /></a>
+                </div>
+                <p><i class="fa fa-copyright"></i> 2020-2021, We Did It Global</p>
+            </div>
+        </header>
+    </main>
+
+    <script>//* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }</script>
+
+    <script>
+        $(document).ready(function () {
+            $(".sidemenu-toggler").click(function () {
+                $(".sidemenu").addClass("active");
+            });
+
+            $(".close").click(function () {
+                $(".sidemenu").removeClass("active");
+            });
+
+            $(window).scroll(function () {
+                var sc = $(window).scrollTop();
+                if (sc > 150) {
+                    $(".header").addClass("sticky");
+                } else {
+                    $(".header").removeClass("sticky");
+                }
+            });
+
+            $(window).on("load", function () {
+                var $container = $(".portfolioContainer");
+                $container.isotope({
+                    filter: "*",
+                    AnimationOptions: {
+                        queue: true,
+                    },
+                });
+
+                $(".portfolio-nav li").click(function () {
+                    $(".portfolio-nav .current").removeClass("current");
+                    $(this).addClass("current");
+                    var selector = $(this).attr("data-filter");
+                    $container.isotope({
+                        filter: selector,
+                        AnimationOptions: {
+                            queue: true,
+                        },
+                    });
+
+                    return false;
+                });
+            });
+
+            $("#portfolio-item").mixItup();
+        });
+    </script>
+</body>
+
+</html>
